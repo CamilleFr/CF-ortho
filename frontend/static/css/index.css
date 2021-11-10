@@ -4,30 +4,24 @@ body {
   --width: 100%;
   overflow: hidden;
   margin: 3% 5% 0 5%;
-  font-family: 'Noto Sans Mono', monospace;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 18px;
   background-color: black;
   text-align: left;
   font-weight: 300;
   color: white;
-}
-
-.home {
-  width: 100%;
-  height: 50vh;
-  position: fixed;
+  background-image: url(./assets/dental.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .home__header {
-  display: block;
+  height: 30%;
 }
 
-.home__logo__block {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin: auto;
-  transform: translate(-50%, -50%);
+svg {
+  width: 90%;
 }
 
 img {
@@ -39,18 +33,25 @@ img {
 }
 
 .home__footer {
+  width: 50%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 90%;
-  position: fixed;
-  bottom: 2%;
-  left: 5%;
+  margin-left: 17%;
 }
 
-.home__footer__fullscreen {
-  transition: transform .3s ease-in-out;
-  flex-flow: row wrap;
+.home__footer__section {
+  flex-direction: row;
+  color: black;
+  text-decoration: none;
+  font-size: 150%;
+  font-weight: bolder;
+}
+
+.home__footer__section:hover {
+  transform: scale(1.7);
+  font-style: bold;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .animate-text span { 
@@ -58,9 +59,9 @@ img {
   color:white; 
   animation:fade-in 0.9s ease-in-out 1;
 	animation-fill-mode: forwards;
-  font-size: 40px;
+  font-size: 50px;
   font-style: bold;
-  font-family: 'Rampart One', cursive;
+  font-family: Helvetica, Arial, sans-serif;
 }
 @keyframes fade-in {
 	0% { opacity:0; font-size:0; xxmargin-left:100px; }
