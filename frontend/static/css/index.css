@@ -17,19 +17,13 @@ body {
 }
 
 .home__header {
-  height: 30%;
+  height: 40%;
 }
 
 svg {
   width: 90%;
-}
-
-img {
-  padding: 10px;
-  height: 10em;
-  width: 10em;
-  border-radius: 50%;
-  border: 1px solid;
+  fill: white;
+  font-size: 40%;
 }
 
 .home__footer {
