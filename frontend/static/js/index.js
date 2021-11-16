@@ -1,25 +1,16 @@
 "use strict";
-window.addEventListener('DOMContentLoaded', (event) => {
-  // animate_text();
-  console.log('passing in DOMCONTENTLOADED')
-  console.log(document)
 
+function animateText() {
   let delay = 100,
     delay_start = 0,
     contents,
     letters;
 
   document.querySelectorAll('.animate-text').forEach(function (elem) {
-    console.log('TRYING TO LOG ELEMENT', elem)
     contents = elem.textContent.trim()
-    console.log('contents', contents)
-
-    // contents = elem.innerHTML.trim()
-    // console.log('CONTENTS', contents)
 
     elem.textContent = "";
     letters = contents.split("");
-    // console.log('letters', letters)
     elem.style.visibility = 'visible';
 
     letters.forEach(function (letter, index_1) {
@@ -31,4 +22,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
     delay_start += delay * letters.length;
   })
-  });
+}
+
+window.addEventListener('DOMContentLoaded', (event) => {
+  animateText();
+});
