@@ -1,5 +1,31 @@
 "use strict";
 
+const router = async () => {
+  const routes = [
+    { path: "/" },
+    { path: "/presentation"},
+    { path: "/traitements"},
+    { path: "/contact"}
+  ]
+
+  const potentialMatches = routes.map((route) => {
+    const result = {
+      route,
+      result: location.pathname
+    }
+    return result
+  })
+
+  let match = potentialMatches.find( potentialMatch => potentialMatch.result !== null)
+  /* Route not found - return first route OR a specific "not-found" route */
+  if(!match) {
+    match = {
+      route: routes[0],
+      result: [location.pathname]
+    }
+  }
+}
+
 function animateText() {
   let delay = 100,
     delay_start = 0,
@@ -24,6 +50,7 @@ function animateText() {
   })
 }
 
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('DOMContentLoaded', async (event) => {
   animateText();
+  router();
 });
