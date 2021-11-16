@@ -26,6 +26,11 @@ const router = async () => {
   }
 }
 
+const navigateTo = (url) => {
+  history.pushState(null, null, url);
+  router()
+}
+
 function animateText() {
   let delay = 100,
     delay_start = 0,
@@ -51,6 +56,16 @@ function animateText() {
 }
 
 window.addEventListener('DOMContentLoaded', async (event) => {
-  animateText();
+  document.body.addEventListener('click', e => {
+    if (e.target.matches['data-link']) {
+      e.preventDefault();
+      navigateTo(e.target.href)
+    }
+  });
+  /* Document has loaded -  run the router! */
   router();
+
+  /* Enables to run the router when the user navigates with the back and forward buttons */
+  document;addEventListener('popstate', router);
+  animateText();
 });
