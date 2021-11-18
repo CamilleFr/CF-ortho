@@ -16,8 +16,8 @@ export default class extends AbstractView {
       </div>
       <div class="home__footer">
         <a href="/presentation" class="home__footer__section" data-link>
-          <svg x="580" y="90" viewBox="0 0 56 6.5">
-            <text x="0" y="5">PRESENTATION</text>
+          <svg x="580" y="100" viewBox="0 0 56 6.5">
+            <text x="0" y="6.4">PRESENTATION</text>
           </svg>
         </a>
         <a href="/traitements" class="home__footer__section" data-link>
@@ -26,8 +26,8 @@ export default class extends AbstractView {
           </svg>
         </a>
         <a href="/contact" class="home__footer__section" data-link>
-          <svg x="560" y="90" viewBox="0 0 56 6.5">
-            <text x="0" y="5">CONTACT</text>
+          <svg x="560" y="100" viewBox="0 0 56 6.5">
+            <text x="0" y="3.7">CONTACT</text>
           </svg>
         </a>
       </div>
