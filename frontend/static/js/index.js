@@ -21,7 +21,7 @@ const navigateTo = url => {
 
 const router = async () => {
     const routes = [
-        { path: "/", view: Home },
+        { path: "/", view: Home},
         { path: "/presentation", view: PresentationView },
         { path: "/traitements", view: TreatmentsView },
         { path: "/contact", view: ContactView }
@@ -51,13 +51,30 @@ const router = async () => {
 
 window.addEventListener("popstate", router);
 
-document.addEventListener("DOMContentLoaded", () => {
-    document.body.addEventListener("click", e => {
-        if (e.target.matches("[data-link]")) {
-            e.preventDefault();
-            navigateTo(e.target.href);
-        }
-    });
+window.onload = () => {
+    const transition_el = document.querySelector(".transition");
+    const anchors = document.querySelectorAll('a');
 
+    setTimeout(() => {
+        transition_el.classList.remove("is-active");
+    }, 500);
+
+    for (let i = 0; i < anchors.length; i++) {
+        const anchor = anchors[i];
+
+        anchor.addEventListener("click", e => {
+            transition_el.classList.add("is-active");
+
+            if (e.target.matches("[data-link]")) {
+                e.preventDefault();
+                setTimeout(() => {
+                    navigateTo(e.target.href);
+                }, 500)
+            }
+        })  
+    };
+};
+
+document.addEventListener("DOMContentLoaded", () => {
     router();
 });
