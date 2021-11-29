@@ -1,3 +1,10 @@
+:root {
+  --light: #E8E9EB;
+  --dark: black;
+  --height: 100%;
+  --width: 100%
+}
+
 body {
   min-height: 100%;
   min-width: 100%;
@@ -11,6 +18,7 @@ body {
   font-weight: 300;
   color: white;
 }
+
 
 .home__header {
   width: 100%;
@@ -33,11 +41,9 @@ body {
 .home__footer__section__presentation:hover, 
 .home__footer__section__traitements:hover,
 .home__footer__section__contact:hover {
-  height: 100px;
-  width: 580px;
   font-family: 'Syncopate', sans-serif;
   font-weight: 300;
-  transform: scale(0, 0.3)
+  transform: scale(0, 0.3);
 }
 
 svg {
@@ -46,33 +52,21 @@ svg {
   font-size: 30%;
 }
 
-.animate-text span { 
-	display:inline-block;
-  color:white; 
-  animation:fade-in 0.9s ease-in-out 1;
-	animation-fill-mode: forwards;
-  font-size: 40px;
-  font-style: bold;
-  font-family: 'Noto Sans Mono', monospace;
-}
-@keyframes fade-in {
-	0% { opacity:0; font-size:0; xxmargin-left:100px; }
-  100% { opacity:1; xxfont-size:300%; xxtransform:rotate(360deg); margin-left:0; }
-}
-
-.presentation__img{
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  align-items: center;
-}
-
 .presentation__body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 100%;
+  text-align: center;
 }
 
-.treatments__body {
-  display: flex;
-  flex-direction: column;
+.views__footer {
+  font-family: 'Syncopate', sans-serif;
+  font-weight: 300;
+  font-size: 10%;
+  /* transform-origin: ; */
+  /* transition-duration: ; */
+  width: 20%;
+  position: fixed;
+  bottom: 0;
+  left: 5%;
+
 }
