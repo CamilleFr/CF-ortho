@@ -45,36 +45,27 @@ const router = async () => {
     }
 
     const view = new match.route.view(getParams(match));
-
-    document.querySelector("#app").innerHTML = await view.getHtml();
+    document.querySelector("#app").innerHTML = await view.getHtml()
 };
 
 window.addEventListener("popstate", router);
 
-window.onload = () => {
-    const transition_el = document.querySelector(".transition");
-    const anchors = document.querySelectorAll('a');
-
-    setTimeout(() => {
-        transition_el.classList.remove("is-active");
-    }, 500);
-
-    for (let i = 0; i < anchors.length; i++) {
-        const anchor = anchors[i];
-
-        anchor.addEventListener("click", e => {
-            transition_el.classList.add("is-active");
-
-            if (e.target.matches("[data-link]")) {
-                e.preventDefault();
-                setTimeout(() => {
-                    navigateTo(e.target.href);
-                }, 500)
-            }
-        })  
-    };
-};
-
 document.addEventListener("DOMContentLoaded", () => {
     router();
+
+    window.onload = () => {
+        const transition = document.querySelector(".transition")
+        const elements = document.querySelector("a")
+
+        setTimeout(() => {
+            transition.classList.remove("is-active");
+        }, 500);
+
+        for (let i = 0; i < elements.length; i++) {
+            const element = elements[i];
+            element.addEventListener("click", () => {
+                transition.classList.add("is-active")
+            })
+        }
+    }
 });
