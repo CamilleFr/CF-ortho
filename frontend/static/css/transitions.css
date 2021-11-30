@@ -15,3 +15,49 @@
   opacity: 1;
   pointer-events: all;
 }
+
+.transition-2 {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  bottom: 0;
+  z-index: 101;
+  background-color: var(--light);
+  transition: 0.5 ease-out;
+}
+
+.transition-2.is-active {
+  left: 0;
+}
+
+.transition-3 {
+  position: fixed;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: 101;
+  background-color: var(--light);
+  transition: 0.5 ease-out;
+}
+
+.transition-3.is-active {
+  top: 0;
+}
+
+/* .transition-2.is-active {
+  animation-duration: 3s;
+  animation-name: glissement;
+}
+@keyframes glissement {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}  */
