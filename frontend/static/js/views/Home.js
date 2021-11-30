@@ -6,10 +6,28 @@ export default class extends AbstractView {
     this.setTitle('Home')
   }
 
+  stringToHTML(string){
+    var parser = new DOMParser();
+    var document = parser.parseFromString(string ,"text/html")
+
+    return document
+  }
+
+  transitionById(string) {
+    var document = this.stringToHTML(string)
+
+    document.getElementById("transition").animate([
+        { transform: 'translateY(0px)' },
+        { transform: 'translateY(-300px)'}
+      ], {
+      duration: 5000
+    });
+
+    return document.body.innerHTML
+  }
   async getHtml() {
     return `
-      <div class="transition transition-1 is-active"></div>
-
+      <div id="transition"></div>
       <nav>
         <div class="home__header">
           <a href="/" >
