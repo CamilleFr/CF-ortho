@@ -12,7 +12,7 @@ export default class extends AbstractView {
         <nav>
           <div class="home__header">
             <a href="/" >
-              <h1>Dr Bruyère-Franc</h1>
+              <h1 class="animate-text">Dr Bruyère-Franc</h1>
             </a>
             </div>
             <div class="home__footer">
