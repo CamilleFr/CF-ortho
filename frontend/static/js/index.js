@@ -67,5 +67,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 transition.classList.add("is-active")
             })
         }
+        document.addEventListener("click", e => {
+            if(e.target.matches("[data-link]")) {
+                e.preventDefault();
+                navigateTo(e.target.href)
+            }
+        })
     }
 });
