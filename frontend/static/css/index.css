@@ -1,72 +1,54 @@
-:root {
-  --light: #E8E9EB;
-  --dark: black;
-  --height: 100%;
-  --width: 100%
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
-  min-height: 100%;
-  min-width: 100%;
-  --width: 100%;
-  overflow: hidden;
-  margin: 3% 5% 0 5%;
-  font-family: 'Noto Sans Mono', monospace;
-  font-size: 18px;
-  background-color: black;
-  text-align: left;
-  font-weight: 300;
-  color: white;
+  min-height: 100vh;
+  font-family: 'Syncopate', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-.home__header {
+nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: #E5DDDB;
   width: 100%;
-  height: 30%;
-  position: fixed;
-  display: block;
+  height: 10vh;
+  border: 0.5px solid grey;
+}
+
+img {
+  object-fit: cover;
+  margin-left: 20%;
+}
+
+.header__menu {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+a {
   text-decoration: none;
+  color: rgb(32, 32, 32);
+  font-weight: bold;
 }
 
-.home__footer {
-  width: 100%;
-  height: 50%;
-  position: fixed;
-  bottom: 0;
-  left: 5%;
+/* .home__menu__section:hover, 
+.home__menu__section:hover,
+.home__menu__section:hover {
   font-family: 'Syncopate', sans-serif;
   font-weight: 700;
-}
-
-.home__footer__section__presentation:hover, 
-.home__footer__section__traitements:hover,
-.home__footer__section__contact:hover {
-  font-family: 'Syncopate', sans-serif;
-  font-weight: 300;
   transform: scale(0, 0.3);
-}
+} */
 
-svg {
-  width: 90%;
-  fill: white;
-  font-size: 30%;
-}
-
-.presentation__body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 100%;
-  text-align: center;
-}
-
-.views__footer {
-  font-family: 'Syncopate', sans-serif;
-  font-weight: 300;
-  font-size: 10%;
-  /* transform-origin: ; */
-  /* transition-duration: ; */
-  width: 20%;
-  position: fixed;
-  bottom: 0;
-  left: 5%;
-
-}
