@@ -16,10 +16,10 @@
   pointer-events: all;
 }
 
-.transition-2 {
+.slide-right {
   position: fixed;
   top: 0;
-  left: -100%;
+  right: -100%;
   width: 100%;
   bottom: 0;
   z-index: 101;
@@ -27,8 +27,8 @@
   transition: 2s ease-out;
 }
 
-.transition-2.is-active {
-  left: 0;
+.slide-right.is-active {
+  right: 0;
 }
 
 .transition-3 {

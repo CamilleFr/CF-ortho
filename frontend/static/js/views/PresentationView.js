@@ -8,8 +8,13 @@ export default class extends AbstractView {
 
   async getHtml() {
     return`        
-      <div class="transition transition-2 is-active"></div>
+      <div class="transition slide-right is-active"></div>
         <nav>
+          <div class="home__header">
+            <a href="/" >
+              <h1 class="animate-text">Dr Bruyère-Franc</h1>
+            </a>
+          </div>
           <div class="views__footer">
             <a href="/presentation" class="home__footer__section__presentation" data-link>
               <svg x="100" y="20" viewBox="0 0 10 2">
