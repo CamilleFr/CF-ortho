@@ -8,7 +8,7 @@ export default class extends AbstractView {
 
   async getHtml() {
     return `
-      <div class="transition transition-1 is-active"></div>
+      <div class="transition transition-2 is-active"></div>
         <nav>
           <div class="views__footer">
             <a href="/presentation" class="home__footer__section__presentation" data-link>
