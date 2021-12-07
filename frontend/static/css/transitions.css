@@ -31,7 +31,7 @@
   right: 0;
 }
 
-.transition-3 {
+.slide-top {
   position: fixed;
   top: 100%;
   left: 0;
@@ -39,25 +39,9 @@
   height: 100%;
   z-index: 101;
   background-color: var(--light);
-  transition: 0.5 ease-out;
+  transition: 2s ease-out;
 }
 
-.transition-3.is-active {
+.slide-top.is-active {
   top: 0;
 }
-
-/* .transition-2.is-active {
-  animation-duration: 3s;
-  animation-name: glissement;
-}
-@keyframes glissement {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}  */

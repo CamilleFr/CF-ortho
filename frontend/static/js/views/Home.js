@@ -8,7 +8,7 @@ export default class extends AbstractView {
 
   async getHtml() {
     return `
-      <div class="transition transition-1 is-active"></div>
+      <div class="transition slide-top is-active"></div>
         <nav>
           <div class="home__header">
             <a href="/" >
@@ -32,7 +32,7 @@ export default class extends AbstractView {
                 </svg>
               </a>
             </div>
-        </nav>
+          </nav>
     `;
   }
 }
